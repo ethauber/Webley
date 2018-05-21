@@ -5,11 +5,11 @@ Solution to Puzzle Question from Webley
 ``` bash
 # clone or download
 
-# unzip
+# unzip/extract file
 
 # open command prompt
 
-# navigate to unzipped folder
+# navigate to unzipped/extracted folder
 
 # example run with
 python3 webleyPuzzle.py CSVWebley.csv
