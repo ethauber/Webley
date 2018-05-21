@@ -1,0 +1,7 @@
+Target Price, $7
+Bacon, $3
+Eggs, $2
+Jerky, $4
+Peppers, $5
+Apples, $6
+Cheese, $7
