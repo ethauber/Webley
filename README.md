@@ -12,9 +12,9 @@ Solution to Puzzle Question from Webley
 # navigate to unzipped/extracted folder
 
 # example run with
-python3 webleyPuzzle.py CSVWebley.csv
+python3 webley_puzzle.py CSVWebley.csv
 
-#usage: python3 webleyPuzzle.py input-file.csv
+#usage: python3 webley_puzzle.py input-file.csv
 ```
 
 My implementation uses depth first search to find the combinations the sum up to the target number through recursively subtracting from the target number until it reaches zero and adds the qualifying candidates to the solution output.
