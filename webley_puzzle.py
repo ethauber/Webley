@@ -23,6 +23,20 @@ class Puzzle:
         self.current_sum = 0
         self.working_list = []
 
+    def is_zero(self, val):
+        '''Check if float is aproximately zero.
+        Can also be done by multiplying by 100 since we only care
+        about two decimal places.
+        '''
+        return math.isclose(float(val), 0, rel_tol=1e-09)
+    
+    def is_all_zero(self, candidates):
+        '''Checks if candidate list is all zero'''
+        print('list ', [val for val in candidates if self.is_zero(val)])
+        return True if [
+            val for val in candidates if self.is_zero(val)
+            ] else False
+
     def find_sum_for_target(self, candidates, target, start, value_list):
         '''
         This function finds the sum we are targeting with the
@@ -35,8 +49,13 @@ class Puzzle:
         Returns:
             None: Works on this object to create solutions
         '''
+
+        if start == 0 and self.is_all_zero(candidates) and self.is_zero(target):
+            self.output_list.append(self.csv_price_list)
+            return
+
         length = len(candidates)
-        if math.isclose(target, 0, rel_tol=1e-09):
+        if self.is_zero(target):
             if value_list not in self.output_list:
                 self.output_list.append(value_list)
             return
